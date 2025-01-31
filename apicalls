@@ -1,0 +1,34 @@
+// ---------- Dummy API Calls ----------
+// These simulate six different external API calls per research point.
+// In your production app, you would replace these with real API calls.
+async function callResearchAPI1(industry, point) {
+  return new Promise((resolve) => 
+    setTimeout(() => resolve(`API1: Detailed analysis for ${industry} on "${point}"`), 1000)
+  );
+}
+async function callResearchAPI2(industry, point) {
+  return new Promise((resolve) => 
+    setTimeout(() => resolve(`API2: Market trends for ${industry} regarding "${point}"`), 1000)
+  );
+}
+async function callResearchAPI3(industry, point) {
+  return new Promise((resolve) => 
+    setTimeout(() => resolve(`API3: Consumer sentiment analysis for ${industry} on "${point}"`), 1000)
+  );
+}
+async function callResearchAPI4(industry, point) {
+  return new Promise((resolve) => 
+    setTimeout(() => resolve(`API4: Competitor analysis in ${industry} related to "${point}"`), 1000)
+  );
+}
+async function callResearchAPI5(industry, point) {
+  return new Promise((resolve) => 
+    setTimeout(() => resolve(`API5: Future outlook (1-10 years) for ${industry} on "${point}"`), 1000)
+  );
+}
+async function callResearchAPI6(industry, point) {
+  return new Promise((resolve) => 
+    setTimeout(() => resolve(`API6: Market segmentation insights for ${industry} concerning "${point}"`), 1000)
+  );
+}
+
