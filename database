@@ -1,0 +1,23 @@
+// ---------- In-Memory "Database" ----------
+let reportsDB = {}; // key: report id, value: report object
+let nextReportId = 1;
+
+function createReportRecord(data) {
+  const id = nextReportId++;
+  const record = {
+    id,
+    name: data.name,
+    organization: data.organization,
+    email: data.email,
+    industry: data.industry,
+    points: data.points || [],
+    status: 'processing',  // possible values: processing, completed, failed
+    progress: 0,           // percentage progress
+    responses: [],         // will store responses per research point
+    compiledReport: '',
+    createdAt: new Date()
+  };
+  reportsDB[id] = record;
+  return record;
+}
+
